@@ -1,5 +1,6 @@
 var_list: 
   - 'Times'
+  - 'XTIME'
   - 'XLAT'
   - 'XLONG'
   - 'Q2'

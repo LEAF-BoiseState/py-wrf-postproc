@@ -27,7 +27,7 @@ def main(argv):
     yaml_varkeep_path = argv[5]
     yaml_varkeep_file = argv[6]
 
-    yaml_varkeep_name = yaml_varkeep_path+yaml_varkeep_name
+    yaml_varkeep_name = yaml_varkeep_path+yaml_varkeep_file
 
     yaml_varall_name = wrf_varlist_file
 
@@ -38,11 +38,11 @@ def main(argv):
     with open(yaml_varkeep_name,'r') as file_keep:
         var_keep = yaml.full_load(file_keep)
 
-    wrf_drop = list(filter(var_keep['var_list'].__ne__, var_all['var_list']))
-
-
+    wrf_drop = var_all['var_list']
+    for var in var_keep['var_list']:
+        wrf_drop.remove(var)
+        
     ds_wrf_subset = xr.open_dataset(innc_name, drop_variables=wrf_drop)
-
 
     ds_wrf_subset.to_netcdf(path=outnc_name)
 
