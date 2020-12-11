@@ -1,0 +1,97 @@
+-
+    var_name: 'SMOIS'
+    out_name: 'SMOIS_DM'
+    operator: 'mean'
+    description: 'Soil moisture, daily average'
+    units: 'm3 m-3'
+
+-
+    var_name: 'SFROFF'
+    out_name: 'SFROFF_DV'
+    operator: 'sum'
+    description: 'Surface runoff, daily total'
+    units: 'mm'
+
+-
+    var_name: 'SNOW'
+    out_name: 'SNOW_DM'
+    operator: 'mean'
+    description: 'Snow water equivalent, daily average'
+    units: 'kg m-2'
+
+-
+    var_name: 'SNOWH'
+    out_name: 'SNOWH_DM'
+    operator: 'mean'
+    description: 'Physical snow depth, daily average'
+    units: 'm'
+
+-
+    var_name: 'TSLB'
+    out_name: 'TSLB_DM'
+    operator: 'mean'
+    description: 'Soil temperature, daily average'
+    units: 'K'
+
+-
+    var_name: 'LH'
+    out_name: 'LH_DM'
+    operator: 'mean'
+    description: 'Latent heat flux at the surface, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'GHV'
+    out_name: 'GHV_DM'
+    operator: 'mean'
+    description: 'Heat flux into soil: under canopy, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'GHB'
+    out_name: 'GHB_DM'
+    operator: 'mean'
+    description: 'Heat flux into soil: bare fraction, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'EVG'
+    out_name: 'EVG_DM'
+    operator: 'mean'
+    description: 'Latent heat flux: ground to canopy, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'EVB'
+    out_name: 'EVB_DM'
+    operator: 'mean'
+    description: 'Latent heat flux: bare grnd to canopy, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'SHG'
+    out_name: 'SHG_DM'
+    operator: 'mean'
+    description: 'Sensible heat flux: ground to canopy, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'SHC'
+    out_name: 'SHC_DM'
+    operator: 'mean'
+    description: 'Sensible heat flux: leaf to canopy, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'SHB'
+    out_name: 'SHB_DM'
+    operator: 'mean'
+    description: 'Sensible heat flux: bare grnd to atmo, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'FVEG'
+    out_name: 'FVEG_DM'
+    operator: 'mean'
+    description: 'Noah-MP vegetation fraction'
+    units: ''
