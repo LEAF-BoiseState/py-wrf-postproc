@@ -106,6 +106,10 @@ def main(argv):
 
             WRFPostProcFuncs.create_daily_dataset('', ncin_name, '', outnc_name, wrf_var_dict)
 
+        print('Completed processing '+wrfoutnc+'...')
+
+    return
+
 if __name__ == '__main__':
     main(sys.argv[1:])
 
