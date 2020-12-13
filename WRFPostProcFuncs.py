@@ -26,7 +26,7 @@ def hourly_to_daily(input_path, input_file, in_var_name, out_var_name, operator,
         da_irain = ds_wrf['I_'+in_var_name]
 
         temp1 = rain_bucket_vol*da_irain + da_rain
-        temp2 = temp1.isel(XTIME=0) - rain_bucket_vol*da_irain.isel(XTIME=0)
+        temp2 = 0.0*temp1.isel(XTIME=0)
         temp3 = temp1.diff('XTIME')
 
         da_rain_acc = xr.concat([temp2, temp3], 'XTIME')
