@@ -1,4 +1,23 @@
 -
+    var_name: 'XLAT'
+    out_name: 'XLAT'
+    operator: 'mean'
+    description: 'LATITUDE, SOUTH IS NEGATIVE'
+    units: 'degree_north'
+-
+    var_name: 'XLONG'
+    out_name: 'XLONG'
+    operator: 'mean'
+    description: 'LONGITUDE, WEST IS NEGATIVE'
+    units: 'degree_east'
+
+-
+    var_name: 'XTIME'
+    out_name: 'XTIME'
+    operator: 'skip'
+    description: 'N/A'
+    units: 'N/A'
+-
     var_name: 'SMOIS'
     out_name: 'SMOIS_DM'
     operator: 'mean'

@@ -4,10 +4,7 @@ import xarray as xr
 import time
 import glob
 
-wrf_varlist_file = './wrf-varlist.yml'
-
-
-def main(argv):
+def subset_vars(argv):
 
     if(len(argv)!=7):
         print("USAGE: wrf-subset-vars.py <in nc path> <in nc file> <out nc path> <out nc file> <var list path> <var list file>\n")
@@ -29,32 +26,23 @@ def main(argv):
 
     yaml_varkeep_name = yaml_varkeep_path+yaml_varkeep_file
 
-    yaml_varall_name = wrf_varlist_file
-
-    # with open(yaml_varall_name,'r') as file_all:
-    #     var_all = yaml.full_load(file_all)
-
-
+    # Get the name of the variables to be subset
     with open(yaml_varkeep_name,'r') as file_keep:
-        var_keep = yaml.full_load(file_keep)
+        var_keep_dict = yaml.full_load(file_keep)
+    
+    var_keep_list = [ sub['var_name'] for sub in var_keep_dict ]
 
-    # wrf_drop = var_all['var_list']
-    # for var in var_keep['var_list']:
-    #     wrf_drop.remove(var)
-        
-    #ds_wrf_subset = xr.open_dataset(innc_name, drop_variables=wrf_drop)
-
+    # Open the wrfout file using Xarray
     ds_wrf = xr.open_dataset(innc_name)
 
-    var_keep_list = var_keep['var_list']
-
+    # Get the subset by passing the list of variable names to keep to 
+    # the *lazily opened* raw wrfout dataset 
     ds_wrf_subset = ds_wrf[var_keep_list]
 
+    # Copy the attributes of the raw WRF dataset to the new subset dataset
     ds_wrf_subset.attrs = ds_wrf.attrs
 
+    # Save the output dataset to the specified netcdf file name 
     ds_wrf_subset.to_netcdf(path=outnc_name)
 
-    return
-
-if __name__ == '__main__':
-    main(sys.argv)
+return
