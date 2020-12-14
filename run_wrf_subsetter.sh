@@ -4,6 +4,7 @@
 #export vol=$2
 export dom=$1
 export yaml_file=$2
+export subset_expr=$3
 
 declare -a YearArray=('1993'
                       '1994' 
@@ -71,7 +72,6 @@ for (( i=0; i<${YearLen}; i++)); do
     wrfout_path=/mnt/wrf_history/${vol}/wrf_out/wy_${year}/${dom}/
     wrfout_expr='wrfout_d0*'
     subset_path=/home/aflores/scratch/wrf_30yr_subsets/wy${year}/
-    subset_expr=$5
     daily_path=/home/aflores/scratch/wrf_30yr_daily_summaries/wy${year}/
 
     mkdir $subset_path
