@@ -74,9 +74,9 @@ for (( i=0; i<${YearLen}; i++)); do
     subset_expr=$5
     daily_path=/home/aflores/scratch/wrf_30yr_daily_summaries/wy${year}/
 
-    #echo "mkdir $subset_path"
-    #echo "mkdir $daily_path"
+    mkdir $subset_path
+    mkdir $daily_path
 
-    echo "python3 wrf-subsetter.py ${CreateDailySummary} ${wrfout_path} ${wrfout_expr} ${subset_path} ${subset_expr} ${daily_path} ${yaml_file}"
+    python3 wrf-subsetter.py ${CreateDailySummary} ${wrfout_path} ${wrfout_expr} ${subset_path} ${subset_expr} ${daily_path} ${yaml_file}
 
 done
