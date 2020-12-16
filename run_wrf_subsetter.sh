@@ -6,7 +6,13 @@ export dom=$1
 export yaml_file=$2
 export subset_expr=$3
 
-declare -a YearArray=('1993'
+declare -a YearArray=('1987'
+                      '1988'
+                      '1989'
+                      '1990'
+                      '1991'
+                      '1992'
+                      '1993'
                       '1994' 
                       '1995' 
                       '1996' 
@@ -33,7 +39,13 @@ declare -a YearArray=('1993'
                       '2017'
                       )
 
-declare -a VolArray=('vol02'
+declare -a VolArray=('vol01'
+                     'vol02'
+                     'vol02'
+                     'vol02'
+                     'vol02'
+                     'vol02'
+                     'vol02'
                      'vol03'
                      'vol03'
                      'vol03'
