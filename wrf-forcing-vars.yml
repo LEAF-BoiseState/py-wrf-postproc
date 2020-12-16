@@ -1,0 +1,116 @@
+-
+    var_name: 'XLAT'
+    out_name: 'XLAT'
+    operator: 'mean'
+    description: 'LATITUDE, SOUTH IS NEGATIVE'
+    units: 'degree_north'
+-
+    var_name: 'XLONG'
+    out_name: 'XLONG'
+    operator: 'mean'
+    description: 'LONGITUDE, WEST IS NEGATIVE'
+    units: 'degree_east'
+
+-
+    var_name: 'XTIME'
+    out_name: 'XTIME'
+    operator: 'skip'
+    description: 'N/A'
+    units: 'N/A'
+-
+    var_name: 'Q2'
+    out_name: 'Q2_DM'
+    operator: 'mean'
+    description: 'Specific humidity, daily average'
+    units: 'kg kg-1'
+
+-
+    var_name: 'T2'
+    out_name: 'T2_DV'
+    operator: 'mean'
+    description: 'Daily average 2 M air temperature'
+    units: 'K'
+
+-
+    var_name: 'T2'
+    out_name: 'T2_max'
+    operator: 'max'
+    description: 'Daily maximum 2 M air temperature'
+    units: 'K'
+
+-
+    var_name: 'T2'
+    out_name: 'T2_min'
+    operator: 'min'
+    description: 'Daily minimum 2 M air temperature'
+    units: 'K'
+
+-
+    var_name: 'PSFC'
+    out_name: 'PSFC_DM'
+    operator: 'mean'
+    description: 'Surface pressure, daily average'
+    units: 'Pa'
+
+-
+    var_name: 'U10'
+    out_name: 'U10_DM'
+    operator: 'mean'
+    description: 'East-west windspeed, daily average'
+    units: 'm s-1'
+
+-
+    var_name: 'V10'
+    out_name: 'V10_DM'
+    operator: 'mean'
+    description: 'North-south windspeed, daily average'
+    units: 'm s-1'
+
+-
+    var_name: 'VEGFRA'
+    out_name: 'VEGFRA_DM'
+    operator: 'mean'
+    description: 'Vegetation fraction, daily average'
+    units: ''
+
+-
+    var_name: 'RAINNC'
+    out_name: 'RAINNC_DM'
+    operator: 'mean'
+    description: 'Precipitation, daily average'
+    units: 'mm'
+
+-
+    var_name: 'I_RAINNC'
+    out_name: 'I_RAINNC_DM'
+    operator: 'skip'
+    description: 'N/A'
+    units: 'N/A'
+
+-
+    var_name: 'SWDOWN'
+    out_name: 'SWDOWN_DM'
+    operator: 'mean'
+    description: 'Downward shortwave flux at ground, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'GLW'
+    out_name: 'GLW_DM'
+    operator: 'mean'
+    description: 'Downward longwave flux at ground, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'SWNORM'
+    out_name: 'SWNORM_DM'
+    operator: 'mean'
+    description: 'Normal downward shortwave flux at ground, daily average'
+    units: 'W m-2'
+
+-
+    var_name: 'FVEG'
+    out_name: 'FVEG_DM'
+    operator: 'mean'
+    description: 'Noah-MP vegetation fraction'
+    units: ''
