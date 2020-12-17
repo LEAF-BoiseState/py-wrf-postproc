@@ -35,6 +35,9 @@ def hourly_to_daily(input_path, input_file, in_var_name, out_var_name, operator,
 
         ds_wrf[in_var_name] = da_rain_acc
 
+    # Special case: if one of the precipitation variables is HAILNC, GRAUPELNC, or SNOWNC
+    # then the variable needs to be deaccumulated before meaningful daily statistics can 
+    # be computed. 
     if((in_var_name=='HAILNC') or (in_var_name=='GRAUPELNC') or (in_var_name=='SNOWNC')):
         da_precip  = ds_wrf[in_var_name]
 
