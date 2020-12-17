@@ -35,6 +35,19 @@ def hourly_to_daily(input_path, input_file, in_var_name, out_var_name, operator,
 
         ds_wrf[in_var_name] = da_rain_acc
 
+    if((in_var_name=='HAILNC') or (in_var_name=='GRAUPELNC') or (in_var_name=='SNOWNC')):
+        da_precip  = ds_wrf[in_var_name]
+
+        temp1 = 0.0*da_precip.isel(XTIME=0)
+        temp2 = da_precip.diff('XTIME')
+
+        da_precip_deacc = xr.concat([temp1, temp2], 'XTIME')
+
+        in_var_name = in_var_name+'_DEACC'
+
+        ds_wrf[in_var_name] = da_precip_deacc
+
+
     if (operator=='sum'):
         da_wrf = ds_wrf[in_var_name].resample(XTIME='1D').sum(dim='XTIME')
     elif (operator=='mean'):

@@ -1,0 +1,82 @@
+-
+    var_name: 'XLAT'
+    out_name: 'XLAT'
+    operator: 'mean'
+    description: 'LATITUDE, SOUTH IS NEGATIVE'
+    units: 'degree_north'
+-
+    var_name: 'XLONG'
+    out_name: 'XLONG'
+    operator: 'mean'
+    description: 'LONGITUDE, WEST IS NEGATIVE'
+    units: 'degree_east'
+
+-
+    var_name: 'XTIME'
+    out_name: 'XTIME'
+    operator: 'skip'
+    description: 'N/A'
+    units: 'N/A'
+-
+    var_name: 'RAINNC'
+    out_name: 'RAINNC_DM'
+    operator: 'mean'
+    description: 'Precipitation, daily average'
+    units: 'mm'
+
+-
+    var_name: 'I_RAINNC'
+    out_name: 'I_RAINNC_DM'
+    operator: 'skip'
+    description: 'N/A'
+    units: 'N/A'
+
+-
+    var_name: 'HAILNC'
+    out_name: 'HAILNC_DV'
+    operator: 'sum'
+    description: 'Precipitation as hail, daily volume'
+    units: 'mm'
+
+-
+    var_name: 'GRAUPELNC'
+    out_name: 'GRAUPELNC_DV'
+    operator: 'sum'
+    description: 'Precipitation as graupel, daily volume'
+    units: ''
+
+-
+    var_name: 'SNOWNC'
+    out_name: 'SNOWNC_DV'
+    operator: 'sum'
+    description: 'Precipitation as snow, daily volume'
+    units: 'mm'
+
+-
+    var_name: 'T2'
+    out_name: 'T2_DA'
+    operator: 'mean'
+    description: 'Air temperature at 2 M, daily average'
+    units: 'K'
+
+-
+    var_name: 'Q2'
+    out_name: 'Q2_DA'
+    operator: 'mean'
+    description: 'Specific humidity at 2 M, daily average'
+    units: 'kg kg-1'
+
+
+-
+    var_name: 'U10'
+    out_name: 'U10_DM'
+    operator: 'mean'
+    description: 'East-west windspeed, daily average'
+    units: 'm s-1'
+
+-
+    var_name: 'V10'
+    out_name: 'V10_DM'
+    operator: 'mean'
+    description: 'North-south windspeed, daily average'
+    units: 'm s-1'
