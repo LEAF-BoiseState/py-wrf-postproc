@@ -86,8 +86,8 @@ for (( i=0; i<${YearLen}; i++)); do
     subset_path=/network-shares/salmon/wrf_subsets/wrf_hourly/${subset_expr}/wy${year}/
     daily_path=/network-shares/salmon/wrf_subsets/wrf_daily/${subset_expr}/wy${year}/
 
-    mkdir $subset_path
-    mkdir $daily_path
+    mkdir -p $subset_path
+    mkdir -p $daily_path
 
     python3 wrf-subsetter.py ${CreateDailySummary} ${wrfout_path} ${wrfout_expr} ${subset_path} ${subset_expr} ${daily_path} ${yaml_file}
 
