@@ -81,10 +81,10 @@ for (( i=0; i<${YearLen}; i++)); do
     vol=${VolArray[$i]}
 
     CreateDailySummary=1
-    wrfout_path=/mnt/wrf_history/${vol}/wrf_out/wy_${year}/${dom}/
+    wrfout_path=/network-shares/wrf_history/${vol}/wrf_out/wy_${year}/${dom}/
     wrfout_expr='wrfout_d0*'
-    subset_path=/home/aflores/scratch/wrf_30yr_subsets/wy${year}/
-    daily_path=/home/aflores/scratch/wrf_30yr_daily_summaries/wy${year}/
+    subset_path=/network-shares/salmon/wrf_subsets/wrf_hourly/${subset_expr}/wy${year}/
+    daily_path=/network-shares/salmon/wrf_subsets/wrf_daily/${subset_expr}/wy${year}/
 
     mkdir $subset_path
     mkdir $daily_path
