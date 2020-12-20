@@ -48,7 +48,7 @@ for (( i=0; i<${YearLen}; i++)); do
 
     outnc_file=${outnc_base}${search_str}_wy${year}_daily_summary.nc
 
-    echo python3 rollup_daily_summaries.py ${search_dir} ${search_str} ${outnc_file}
+    python3 rollup_daily_summaries.py ${search_dir} ${search_str} ${outnc_file}
 
 done
 

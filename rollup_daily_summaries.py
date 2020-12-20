@@ -20,6 +20,8 @@ def main(argv):
 
     ds.to_netcdf(outncname)
 
+    print('Completed write of '+outncname)
+
     return
 
 
