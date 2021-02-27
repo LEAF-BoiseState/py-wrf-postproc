@@ -3,10 +3,12 @@ import xarray as xr
 import zarr
 
 subset_key = 'forcing'
+base_dir = '/home/aflores/scratch/wrf_30yr_subsets/forcing/'
+
 
 for year in np.arange(1988,2018):
 
-    wy_ss_dir = 'wy'+'{:d}'.format(year)
+    wy_ss_dir = base_dir+'wy'+'{:d}'.format(year)
 
     zarr_store = wy_ss_dir+'-'+subset_key+'.zarr'
 
