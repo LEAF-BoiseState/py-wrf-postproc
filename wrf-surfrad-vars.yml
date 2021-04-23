@@ -1,0 +1,44 @@
+-
+    var_name: 'XLAT'
+    out_name: 'XLAT'
+    operator: 'mean'
+    description: 'LATITUDE, SOUTH IS NEGATIVE'
+    units: 'degree_north'
+-
+    var_name: 'XLONG'
+    out_name: 'XLONG'
+    operator: 'mean'
+    description: 'LONGITUDE, WEST IS NEGATIVE'
+    units: 'degree_east'
+
+-
+    var_name: 'XTIME'
+    out_name: 'XTIME'
+    operator: 'skip'
+    description: 'N/A'
+    units: 'N/A'
+-
+    var_name: 'SWDOWN'
+    out_name: 'SWDOWN_DM'
+    operator: 'mean'
+    description: 'Downward shortwave flux at ground, daily average'
+    units: 'W m-2'
+-
+    var_name: 'SWUPB'
+    out_name: 'SWUPB_DM'
+    operator: 'mean'
+    description: 'Upward shortwave flux at ground, daily average'
+    units: 'W m-2'
+-
+    var_name: 'GLW'
+    out_name: 'GLW_DM'
+    operator: 'mean'
+    description: 'Downward longwave flux at ground, daily average'
+    units: 'W m-2'
+-
+    var_name: 'LWUPB'
+    out_name: 'LWUPB_DM'
+    operator: 'mean'
+    description: 'Upward longwave flux at ground, daily average'
+    units: 'W m-2'
+
